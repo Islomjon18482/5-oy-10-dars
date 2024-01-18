@@ -26,3 +26,10 @@ document.addEventListener("DOMContentLoaded", function(){
         console.log(err);
     })
 })
+
+if(!localStorage.getItem("userInfo")){
+    let url = window.location.href
+    let num = url.indexOf("/pages")
+    let newUrl = url.substring(0,num);
+    window.location.href = `${newUrl}/pages/singup.html`;
+}
