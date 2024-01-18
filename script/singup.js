@@ -5,6 +5,8 @@ const email = document.querySelector("#email")
 const password = document.querySelector("#password")
 const conPassword = document.querySelector("#conPassword")
 
+console.log(login);
+
 login.addEventListener("click", function(){
     let url = window.location.href
     let num = url.indexOf("/pages")
