@@ -1,4 +1,12 @@
 const block = document.querySelector(".block")
+const admin = document.querySelector("#admin")
+
+admin.addEventListener("click", function(){
+    let url = window.location.href
+    let num = url.indexOf("/pages")
+    let newUrl = url.substring(0,num);
+    window.location.href = `${newUrl}/pages/admin.html`;
+})
 
 function creat(data){
     return `
@@ -31,5 +39,5 @@ if(!localStorage.getItem("userInfo")){
     let url = window.location.href
     let num = url.indexOf("/pages")
     let newUrl = url.substring(0,num);
-    window.location.href = `${newUrl}/pages/singup.html`;
+    window.location.href = `${newUrl}/pages/singin.html`;
 }
