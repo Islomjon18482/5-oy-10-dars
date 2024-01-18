@@ -1,9 +1,16 @@
 const singUp = document.querySelectorAll(".sing_up")
-const login = document.querySelector("#singUp")
+const login = document.querySelector("#login")
 const name = document.querySelector("#name")
 const email = document.querySelector("#email")
 const password = document.querySelector("#password")
 const conPassword = document.querySelector("#conPassword")
+
+login.addEventListener("click", function(){
+    let url = window.location.href
+    let num = url.indexOf("/pages")
+    let newUrl = url.substring(0,num);
+    window.location.href = `${newUrl}/pages/singin.html`;
+})
 
 const validateEmail = (email) => {
     return String(email)
